@@ -1,0 +1,14 @@
+function [k]=fact1(a)
+ if (a<0|a>170) then
+ k=-1;
+ disp('INVALID');
+ break;
+ elseif (a==0|a==1) then
+ k=1;
+ else
+ k=a*fact1(a-1);
+ end
+endfunction
+a=input("Enter value: ");
+p=fact1(a);
+disp(p,'Factorial value is: ');
