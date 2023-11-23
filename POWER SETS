@@ -1,0 +1,19 @@
+n=5;//number of elements of set A
+m=2^n-1;//number of elements of power set of A excluding A itself
+disp(m,'Number of proper subsets A =');
+
+/** explain **/
+Certainly! Let's break down the SCILAB code:
+
+1. **Setting the Number of Elements in Set A**:
+   - `n = 5;` sets the variable `n` to the number of elements in set A. In this case, it's set to 5.
+
+2. **Calculating the Number of Elements in the Powerset of A**:
+   - `m = 2^n - 1;` calculates the number of elements in the powerset of set A excluding the set A itself.
+   - The formula \(2^n - 1\) is used because the powerset includes all subsets, including the empty set, but we exclude the original set A, hence the subtraction of 1.
+
+3. **Displaying the Result**:
+   - `disp(m, 'Number of proper subsets A =');` displays the number of proper subsets of set A.
+   - The message `'Number of proper subsets A ='` is shown along with the calculated value of `m`, which represents the count of proper subsets of set A.
+
+This code snippet calculates and displays the number of proper subsets of a set with 5 elements using the formula \(2^n - 1\), where \(n\) is the number of elements in the set. It excludes the original set itself while counting all possible subsets. Adjusting the value of `n` will provide the count of proper subsets for a set with a different number of elements.
