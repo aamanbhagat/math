@@ -1,0 +1,41 @@
+Q.1 A teacher is preparing an examination time table for 5 papers to be
+held on 5 consecutive days. How many different time table can she
+make?
+
+Q.2 A manager has 10 persons working under him and he is expected to
+award 3 prizes to the persons whom he ranks are the top three
+achievers in the previous year. How many choices does he have?
+
+SOURCE CODE:
+
+function [k]=prmtn(n, r)
+ k=factorial(n)/factorial(n-r);
+endfunction
+n=5;//number of days available
+r=5;//number of papers to schedule
+ans1=prmtn(n,r);
+disp(ans1,'Number of different time tables:');
+a=10;//total number of people available
+b=3;//number people to select
+ans2=prmtn(a,b);
+disp(ans2,'Number of choices manager has:');
+
+/** explain **/
+Certainly! This SCILAB code defines a function `prmtn` to calculate permutations and then demonstrates its use with two scenarios:
+
+1. **Function `prmtn(n, r)`**:
+   - This function takes two parameters `n` and `r`, representing the total number of elements and the number of elements to be selected for permutations respectively.
+   - Inside the function, it computes permutations using the formula \(\frac{n!}{(n-r)!}\), where `factorial(n)` represents the factorial of `n`.
+   - It calculates the number of different arrangements or permutations of `r` elements taken from a set of `n` elements.
+
+2. **Calculating Permutations for Different Scenarios**:
+   - `n = 5;` and `r = 5;` are set as the number of days available and the number of papers to schedule respectively.
+   - `ans1 = prmtn(n, r);` calls the `prmtn` function with these values and stores the result.
+   - `disp(ans1,'Number of different time tables:');` displays the number of different timetables that can be created with 5 days and scheduling 5 papers.
+
+3. **Another Example of Permutations**:
+   - `a = 10;` and `b = 3;` are set as the total number of people available and the number of people to select respectively.
+   - `ans2 = prmtn(a, b);` calls the `prmtn` function with these values and stores the result.
+   - `disp(ans2,'Number of choices manager has:');` displays the number of choices the manager has when selecting 3 people out of 10 available.
+
+This code uses the `prmtn` function to compute permutations for different scenarios, demonstrating its application in calculating the number of different arrangements or choices based on the given parameters.
