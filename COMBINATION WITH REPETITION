@@ -1,0 +1,39 @@
+AIM: Write a program in Scilab for the following:
+
+Q.1 A bagel shop sells 5 kinds of bagels. Find the number of ways a
+customer can buy: (a) 8 bagels; (b) a dozen bagels.
+
+SOURCE CODE:
+
+function [k]=rcmbntn(r, m)
+ k=factorial(r+(m-1))/(factorial(r)*factorial(m-1));
+endfunction
+r1=8;//number of objects to select
+m=5;//kinds of objects available
+ans1=rcmbntn(r1,m);
+disp(ans1,'Number of ways a customer can buy 8 bangles from 5
+different kinds of bangles is:');
+r2=12;//number of objects to select
+ans2=rcmbntn(r2,m);
+disp(ans2,'Number of ways a customer can buy 12 bangles from 5
+different kinds of bangles is:');
+
+/** explain **/
+
+Certainly! This SCILAB code defines a function `rcmbntn` to calculate combinations with repetitions and demonstrates its use in two scenarios:
+
+1. **Function `rcmbntn(r, m)`**:
+   - This function takes two parameters `r` and `m`, representing the number of objects to select and the number of kinds of objects available respectively.
+   - Inside the function, it computes combinations with repetitions using the formula \(\frac{(r + (m - 1))!}{r! \times (m - 1)!}\), where `factorial()` represents the factorial function.
+
+2. **Calculating Combinations with Repetitions**:
+   - `r1 = 8;` and `m = 5;` are set as the number of objects to select and the kinds of objects available for the first scenario.
+   - `ans1 = rcmbntn(r1, m);` calls the `rcmbntn` function with these values and stores the result.
+   - `disp(ans1, 'Number of ways a customer can buy 8 bangles from 5 different kinds of bangles is:');` displays the number of ways a customer can buy 8 bangles from 5 different kinds.
+
+3. **Another Example of Combinations with Repetitions**:
+   - `r2 = 12;` is set as the number of objects to select for the second scenario.
+   - `ans2 = rcmbntn(r2, m);` calls the `rcmbntn` function with these values and stores the result.
+   - `disp(ans2, 'Number of ways a customer can buy 12 bangles from 5 different kinds of bangles is:');` displays the number of ways a customer can buy 12 bangles from 5 different kinds.
+
+This code uses the `rcmbntn` function to compute combinations with repetitions for different scenarios, showcasing its application in calculating the number of possible combinations when selecting objects from a set with multiple kinds.
