@@ -1,0 +1,53 @@
+AIM: Write a program in Scilab to evaluate the following polynomials:
+(i) 𝑓(𝑥) = 𝑥^3 − 2𝑥 + 1 𝑎𝑡 𝑥 = 2 .
+(ii) 𝑔(𝑥) = 𝑥^2 − 1 𝑎𝑡 𝑥 = 3.
+(iii) ℎ(𝑥) = 2𝑥^3 − 7𝑥^2 + 4𝑥 − 15 𝑎𝑡 𝑥 = 5.
+
+
+SOURCE CODE:
+
+
+f=poly([1,-2,0,1],'x','c');
+disp(f,'the polynomial f is ');
+k=horner(f,2);
+disp(k,'value of polynomial f at x = 2 is ');
+g=poly([1,-1],'x','r');
+disp(g,'the polynomial g is ');
+l=horner(g,3);
+disp(l,'value of polynomial g at x = 3 is ');
+x = poly(0, 'x');
+h = 2*x^3-7*x^2+4*x-15;
+disp(h,'the polynomial h is')
+m=horner(h,5);
+disp(m,'value of the polynomial h at x = 5 is ');
+
+/** explain **/
+
+Certainly! This SCILAB code deals with polynomial functions and evaluates them at specific values using the `poly()` and `horner()` functions:
+
+1. **Creating Polynomial 'f'**:
+   - `f = poly([1, -2, 0, 1], 'x', 'c');` creates a polynomial 'f' with coefficients 1, -2, 0, and 1 using the `poly()` function.
+   - `disp(f,'the polynomial f is ');` displays the polynomial 'f'.
+
+2. **Evaluating Polynomial 'f' at x = 2**:
+   - `k = horner(f, 2);` evaluates the polynomial 'f' at x = 2 using the `horner()` function.
+   - `disp(k,'value of polynomial f at x = 2 is ');` displays the value of 'f' at x = 2.
+
+3. **Creating Polynomial 'g'**:
+   - `g = poly([1, -1], 'x', 'r');` creates a polynomial 'g' with roots at 1 and -1 using the `poly()` function.
+   - `disp(g,'the polynomial g is ');` displays the polynomial 'g'.
+
+4. **Evaluating Polynomial 'g' at x = 3**:
+   - `l = horner(g, 3);` evaluates the polynomial 'g' at x = 3 using the `horner()` function.
+   - `disp(l,'value of polynomial g at x = 3 is ');` displays the value of 'g' at x = 3.
+
+5. **Creating Polynomial 'h'**:
+   - `x = poly(0, 'x');` creates a polynomial 'x'.
+   - `h = 2*x^3 - 7*x^2 + 4*x - 15;` defines a polynomial 'h' as \(2x^3 - 7x^2 + 4x - 15\).
+   - `disp(h,'the polynomial h is');` displays the polynomial 'h'.
+
+6. **Evaluating Polynomial 'h' at x = 5**:
+   - `m = horner(h, 5);` evaluates the polynomial 'h' at x = 5 using the `horner()` function.
+   - `disp(m,'value of the polynomial h at x = 5 is ');` displays the value of 'h' at x = 5.
+
+This code demonstrates the creation of polynomials and their evaluation at specific values using the `poly()` function to generate polynomials and the `horner()` function to evaluate them at given points. It showcases how to create, manipulate, and evaluate polynomial expressions in SCILAB.
