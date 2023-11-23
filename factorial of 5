@@ -1,0 +1,40 @@
+clear; // Remove clear, clc from code if you want to access existing stored variable from the memory
+
+//Chapter 02:Basic Structures: Sets, Functions, Sequences, Sums and Matrices
+
+clc;
+clear;
+
+mprintf("The factorial of 1 is")
+disp(factorial(1))
+mprintf("The factorial of 2 is")
+disp(factorial(2))
+mprintf("The factorial of 6 is")
+disp(factorial(6))
+mprintf("The factorial of 20 is")
+disp(factorial(20))
+
+disp("It shows that the factorial function grows extremely rapidly as the number grows.")
+
+
+/** explain **/
+This SCILAB code demonstrates the use of the `factorial()` function to compute factorials of different numbers and showcases the rapid growth of factorials as the numbers increase.
+
+Let's break down the code step by step:
+
+1. **Clearing Workspace**:
+   - `clear;` and `clc;` are used to clear the existing workspace and command window, respectively, providing a clean environment for the code execution.
+
+2. **Displaying Factorials**:
+   - `mprintf("The factorial of 1 is")` displays a message indicating the calculation of the factorial of 1.
+   - `disp(factorial(1))` calculates and displays the factorial of 1 using the `factorial()` function.
+   - Similarly, the code proceeds to calculate and display factorials for numbers 2, 6, and 20 using `factorial()` and displays them using `disp()` and `mprintf()`.
+
+3. **Observation**:
+   - `disp("It shows that the factorial function grows extremely rapidly as the number grows.")` provides an observation or conclusion based on the displayed factorials.
+   
+Explanation:
+- The code demonstrates the usage of the `factorial()` function in SCILAB to calculate factorials for specific numbers.
+- Factorials grow rapidly; even small increases in the number result in significantly larger factorials. For instance, the factorial of 20 is quite substantial compared to factorials of smaller numbers like 1, 2, or 6.
+
+This code snippet essentially illustrates the growth rate of factorials by calculating and displaying factorials for different numbers, emphasizing how quickly factorials increase as the number being calculated increases.
