@@ -1,0 +1,12 @@
+AIM: Write a program in Scilab to compute Greatest Common Divisor.
+SOURCE CODE:
+function thegcd(a, b)
+ A=int32([a,b]);
+ans=gcd(A);
+disp(ans,'the gcd of the two numbers is');
+endfunction
+OUTPUT:
+exec('E:\Scilab program files\thegcd.sci');
+thegcd(220,15);
+the gcd of the two numbers is
+5
