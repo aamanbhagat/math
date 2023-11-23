@@ -1,0 +1,41 @@
+disp("Experiment: selection of a person out of 100 people ")
+T=100;//total no. of people
+M=45;//no of people likes to eat Mango
+O=35;//no of people likes to eat Orange
+MandO=15;//no of people likes both Mango and Orange
+PM=M/T;//probability of the selected person likes Mango
+disp(PM,'Probability of people like Mango:');
+PO=O/T;//probability of the selected person likes Orange
+disp(PO,'Probability of people like Orange:');
+PMandO=MandO/T;//probability of the selected person like both Mango nad Orange
+disp(PMandO,'Probability of people like both Mango and Orange:');
+PMorO=PM+PO-PMandO;//addition rule
+disp(PMorO,'Probability of the selected person likes Mango or Orange:');
+
+
+/** explain **/
+Certainly! This SCILAB code is performing probability calculations based on the selection of a person out of 100 people and their preferences for eating Mango, Orange, or both. Here's an explanation:
+
+1. **Description**:
+   - `disp("Experiment: selection of a person out of 100 people ")` displays a description of the experiment.
+
+2. **Given Information**:
+   - `T = 100;` represents the total number of people (100 individuals in this case).
+   - `M = 45;` denotes the number of people who like to eat Mango.
+   - `O = 35;` signifies the number of people who like to eat Orange.
+   - `MandO = 15;` indicates the number of people who like both Mango and Orange.
+
+3. **Calculating Individual Probabilities**:
+   - `PM = M / T;` computes the probability of the selected person liking Mango.
+   - `disp(PM, 'Probability of people like Mango:');` displays the probability of a randomly selected person liking Mango.
+   - `PO = O / T;` calculates the probability of the selected person liking Orange.
+   - `disp(PO, 'Probability of people like Orange:');` displays the probability of a randomly selected person liking Orange.
+   - `PMandO = MandO / T;` determines the probability of the selected person liking both Mango and Orange.
+   - `disp(PMandO, 'Probability of people like both Mango and Orange:');` displays the probability of a randomly selected person liking both Mango and Orange.
+
+4. **Applying Addition Rule of Probability**:
+   - `PMorO = PM + PO - PMandO;` applies the addition rule of probability: \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\).
+   - This calculates the probability of the selected person liking Mango or Orange (or both).
+   - `disp(PMorO, 'Probability of the selected person likes Mango or Orange:');` displays the probability of a randomly selected person liking Mango or Orange (or both).
+
+The code computes and displays the probabilities of individuals liking Mango, Orange, or both, and then uses the addition rule of probability to determine the probability of an individual liking Mango or Orange.
