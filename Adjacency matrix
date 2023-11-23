@@ -1,0 +1,34 @@
+AIM: Write a program in Scilab to display adjacency matrix of the following
+
+SOURCE CODE:
+
+A=[0 0 0 1;1 0 1 1;1 0 0 1;1 0 1 0];
+disp(A,'Adjacency matrix of first digraph is:');
+k=sum(A);
+disp(k,'Number of edges in first digraph is:');
+B=[0 0 0 1;2 1 1 0;0 0 0 0;0 1 1 0];
+disp(B,'Adjacency matrix of second digraph is:');
+n=sum(B);
+disp(n,'Number of edges in second digraph is:');
+
+/** explain **/
+
+This SCILAB code deals with adjacency matrices representing directed graphs and counts the number of edges in each graph.
+
+1. **Defining Adjacency Matrix 'A' for the First Digraph**:
+   - `A = [0 0 0 1; 1 0 1 1; 1 0 0 1; 1 0 1 0];` defines an adjacency matrix 'A' representing the connections in the first directed graph.
+   - `disp(A, 'Adjacency matrix of first digraph is:');` displays the adjacency matrix 'A' representing the connections in the first digraph.
+
+2. **Counting Number of Edges in the First Digraph**:
+   - `k = sum(A);` calculates the sum along the columns of matrix 'A', effectively counting the number of edges in the first digraph.
+   - `disp(k, 'Number of edges in first digraph is:');` displays the count of edges in the first digraph.
+
+3. **Defining Adjacency Matrix 'B' for the Second Digraph**:
+   - `B = [0 0 0 1; 2 1 1 0; 0 0 0 0; 0 1 1 0];` defines another adjacency matrix 'B' representing the connections in the second directed graph.
+   - `disp(B, 'Adjacency matrix of second digraph is:');` displays the adjacency matrix 'B' representing the connections in the second digraph.
+
+4. **Counting Number of Edges in the Second Digraph**:
+   - `n = sum(B);` calculates the sum along the columns of matrix 'B', counting the number of edges in the second digraph.
+   - `disp(n, 'Number of edges in second digraph is:');` displays the count of edges in the second digraph.
+
+Both sets of code perform similar actions for different adjacency matrices, displaying the adjacency matrix for the graph and then counting the number of edges by summing the connections along the columns of the matrix representing the directed graphs. This demonstrates a simple way to represent directed graphs as adjacency matrices and count their edges using SCILAB.
