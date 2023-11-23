@@ -1,0 +1,47 @@
+A=[1,3,5,7,9];
+a=length(A);
+disp(a,'Cardinality of set A is:')
+x=1;
+y=2;
+z=3;
+B=[x,y,z];
+b=length(B);
+disp(b,'Cardinality of set B is:');
+Apple=2;
+Acer=4;
+Sony=6;
+Dell=8;
+Lenovo=10;
+C=[Apple, Acer, Sony, Dell, Lenovo];
+c=length(C);
+disp(c,'Cardinality of set C is:');
+
+
+
+/** explain**/
+This code snippet in SCILAB defines sets A, B, and C, and then determines their cardinalities (number of elements) using the `length()` function. Let me break it down step by step:
+
+1. **Defining Set A**:
+   - `A = [1, 3, 5, 7, 9];` creates a set A containing the elements 1, 3, 5, 7, and 9.
+
+2. **Calculating Cardinality of Set A**:
+   - `a = length(A);` calculates the length (number of elements) of set A.
+   - `disp(a,'Cardinality of set A is:');` displays the cardinality of set A using the `disp()` function.
+
+3. **Defining Set B**:
+   - `x = 1; y = 2; z = 3;` assigns values to variables x, y, and z.
+   - `B = [x, y, z];` creates a set B containing the values of x, y, and z (which are 1, 2, and 3 respectively).
+
+4. **Calculating Cardinality of Set B**:
+   - `b = length(B);` calculates the length (number of elements) of set B.
+   - `disp(b,'Cardinality of set B is:');` displays the cardinality of set B using `disp()`.
+
+5. **Defining Set C**:
+   - `Apple = 2; Acer = 4; Sony = 6; Dell = 8; Lenovo = 10;` assigns values to variables representing different brands.
+   - `C = [Apple, Acer, Sony, Dell, Lenovo];` creates a set C containing the values of Apple, Acer, Sony, Dell, and Lenovo (which are 2, 4, 6, 8, and 10 respectively).
+
+6. **Calculating Cardinality of Set C**:
+   - `c = length(C);` calculates the length (number of elements) of set C.
+   - `disp(c,'Cardinality of set C is:');` displays the cardinality of set C using `disp()`.
+
+So, this code essentially demonstrates how to define sets in SCILAB using arrays and then calculates and displays the cardinalities of those sets.
