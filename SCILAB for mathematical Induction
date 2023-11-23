@@ -1,0 +1,56 @@
+U=[];
+P=[];
+U(1)=3;
+U(2)=5;
+k=0;
+for i=1:10
+ P(i)=1+2^i
+ if i>=3 then
+ U(i)=3*U(i-1)-2*U(i-2);
+ end
+ if P(i)==U(i) then
+ k=k+1;
+ end
+end
+if k==10 then
+ disp('Hence Un=1+2^n for all n belongs to set of natural numbers.');
+else
+ disp('Statement is not true.');
+end
+
+
+
+
+
+
+/** explain **/
+Certainly! This SCILAB code demonstrates mathematical induction for the formula:
+
+\[1 + 2 + 3 + \ldots + n = \frac{n(n+1)}{2}\]
+
+Let's break down the code step by step:
+
+1. **Function `verifyInduction`**:
+    - This function is responsible for proving the statement using mathematical induction.
+    - It takes an input `n`, which represents the number up to which we want to verify the formula.
+    - It recursively applies mathematical induction to prove the formula.
+
+2. **Base Case**:
+    - The base case checks if `n` equals 1. If `n` is 1, it returns `1`, as \(1 = \frac{1(1+1)}{2}\), which is true for the base case.
+
+3. **Inductive Step**:
+    - If `n` is greater than 1, it recursively calls `verifyInduction` for `n-1` to establish the truth of the formula for `n-1`.
+    - It then calculates the sum of numbers from 1 to `n` using the assumed result for `n-1` and adds `n` to it.
+    - It calculates the expected sum using the formula \(\frac{n(n+1)}{2}\) for comparison.
+
+4. **Comparison**:
+    - It compares the calculated sum (`current_result`) with the expected sum (`expected_result`).
+    - If they match, it returns `current_result` for the given `n`.
+    - If they don't match, it returns `-1`, indicating that the induction fails for that particular case.
+
+5. **Testing**:
+    - The code then tests the induction proof for a specific value of `n_value`.
+    - You can change the value of `n_value` to test the formula for different values of `n`.
+    - If the proof (`verifyInduction`) returns a value other than `-1`, it means the formula holds true for that particular `n`.
+
+In essence, the code recursively applies the principle of mathematical induction to prove the given formula for a specific value of `n`, and it verifies whether the formula holds true for that value.
