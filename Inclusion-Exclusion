@@ -1,0 +1,47 @@
+// Define the number of students taking each language
+num_French = 30;    // Number of students taking French
+num_German = 25;    // Number of students taking German
+num_Russian = 20;   // Number of students taking Russian
+
+// Number of students taking multiple languages
+num_French_German = 10;    // Number of students taking both French and German
+num_French_Russian = 5;    // Number of students taking both French and Russian
+num_German_Russian = 8;    // Number of students taking both German and Russian
+
+// Number of students taking all three languages
+num_all_three = 3;    // Number of students taking French, German, and Russian
+
+// Calculate the total number of students taking at least one language
+total_students = num_French + num_German + num_Russian - num_French_German - num_French_Russian - num_German_Russian + num_all_three;
+
+// Display the result
+disp(total_students, 'Number of mathematics students taking at least one language:');
+
+
+
+
+
+/** explain **/
+Sure, let's break down the code step by step:
+
+1. **Defining the Number of Students Taking Each Language**:
+   - `num_French = 30;`, `num_German = 25;`, and `num_Russian = 20;` define the number of students taking French, German, and Russian respectively.
+
+2. **Counting Students Taking Multiple Languages**:
+   - `num_French_German = 10;`, `num_French_Russian = 5;`, and `num_German_Russian = 8;` represent the number of students taking combinations of languages. For instance, 10 students might be taking both French and German.
+
+3. **Counting Students Taking All Three Languages**:
+   - `num_all_three = 3;` represents the number of students taking French, German, and Russian.
+
+4. **Applying the Inclusion-Exclusion Principle**:
+   The inclusion-exclusion principle formula used here is:
+
+   \[ \text{Number of students taking at least one language} = |F \cup G \cup R| = |F| + |G| + |R| - |F \cap G| - |F \cap R| - |G \cap R| + |F \cap G \cap R| \]
+
+   - `total_students = num_French + num_German + num_Russian - num_French_German - num_French_Russian - num_German_Russian + num_all_three;` computes the total number of students taking at least one language.
+   - The logic here is to add the total number of students taking each language, subtract the number of students taking combinations of two languages, and then add back the number of students taking all three languages. This accounts for not double-counting students taking multiple languages.
+
+5. **Displaying the Result**:
+   - `disp(total_students, 'Number of mathematics students taking at least one language:');` prints the calculated total number of students taking at least one language.
+
+This code snippet illustrates the application of the inclusion-exclusion principle to determine the total number of mathematics students taking at least one of the languages (French, German, or Russian) by considering the individual counts and overlaps between sets of students taking different languages. Adjusting the counts in the code will accommodate different scenarios or numbers of students taking these languages.
