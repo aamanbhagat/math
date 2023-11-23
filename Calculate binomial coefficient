@@ -1,0 +1,45 @@
+AIM: Write a program in Scilab to calculate Binomial Coefficient nCr, where n and r values are given by user (n=10 & r=7) and to verify n^Cr = n^Cn-r (for n=8 & r=5).
+
+SOURCE CODE:
+
+
+function [k]=bnml(n, r)
+ k=factorial(n)/(factorial(r)*factorial(n-r));
+endfunction
+a=input('Enter value for n:');
+b=input('Enter value for r:');
+ans=bnml(a,b);
+disp(ans,'Value of required binomial coefficient is:');
+//to verify nCr=nC(n-r)
+n=input('Enter value for n:');
+r=input('Enter value for r:');
+p=bnml(n,r);
+disp(p,'Value of nCr is:');
+q=bnml(n,n-r);
+disp(q,'Value of nC(n-r) is:');
+if p==q then
+ disp('Hence nCr=nC(n-r) verified.')
+else
+ disp('nCr=nC(n-r) not verified.')
+end
+
+/** explain **/
+
+This SCILAB code is designed to calculate binomial coefficients and verify a property of binomial coefficients: \(nCr = nC(n-r)\).
+
+1. **Function `bnml(n, r)`**:
+   - This function calculates binomial coefficients using the formula \(\frac{n!}{r!(n-r)!}\), where `factorial()` represents the factorial function.
+   - It takes two parameters `n` and `r` and returns the calculated binomial coefficient.
+
+2. **Calculating Binomial Coefficients**:
+   - `a = input('Enter value for n:');` and `b = input('Enter value for r:');` prompt the user to input values for 'n' and 'r'.
+   - `ans = bnml(a, b);` calculates the binomial coefficient using the `bnml()` function with the provided values of 'n' and 'r'.
+   - `disp(ans, 'Value of required binomial coefficient is:');` displays the calculated binomial coefficient.
+
+3. **Verifying a Property of Binomial Coefficients**:
+   - `n = input('Enter value for n:');` and `r = input('Enter value for r:');` prompt the user again to input 'n' and 'r' for verification.
+   - `p = bnml(n, r);` calculates the binomial coefficient \(nCr\) using the `bnml()` function.
+   - `q = bnml(n, n-r);` calculates the binomial coefficient \(nC(n-r)\) using the `bnml()` function.
+   - It checks if \(nCr\) is equal to \(nC(n-r)\) and displays a verification message accordingly.
+
+This code demonstrates the calculation of binomial coefficients based on user-provided values for 'n' and 'r' and verifies the property that \(nCr = nC(n-r)\) using the calculated binomial coefficients. It showcases how to compute binomial coefficients and validate a property associated with them.
